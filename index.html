@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictory</title>
+    <link rel="shortcut icon" type="imagex/png" href="./img/logo (2).png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .container {
+            width: 100vw;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            z-index: 1000;
+            
+        }
+        .logo img {
+            height: 40px;
+            cursor: pointer;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .buttons button {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .btn-enter {
+            background: linear-gradient(45deg, #2C8BCA, #79BF45, #FDB215, #F68223, #F13C29, #EF579F);
+            color: white;
+        }
+        .btn-signup {
+            background: #CBCBCB;
+            border: 2px solid #F13C29;
+            color: #000000;
+        }
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding-top: 60px;
+        }
+    
+        .left {
+    width: 50%;
+    background: url('./img/medium-shot-cool-girls-with-gen-z-makeup 1.png') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.phone {
+    width: 175px;
+    height: 320px;
+    background: url('./img/young-woman-wearing-trendy-hairstyle 1.png') no-repeat center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute; 
+    bottom: 35px; 
+    left: 70px; 
+    
+   
+}
+
+.profile-container {
+  position: absolute;
+  bottom: 0; /* fica alinhado embaixo */
+  left: 10px; /* ajusta a esquerda */
+  display: flex;
+  align-items: center;
+  z-index: 2; /* garante que fique sobre o celular */
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: url('./img/image.png') no-repeat center;
+  background-size: cover;
+  position: relative;
+  top: 260px;
+  left: -27px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.profile-text {
+  margin-left: 10px;
+  margin-bottom: 10px; /* para alinhar com a borda inferior */
+  color: #333;
+}
+
+.profile-text h3 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.profile-text p {
+  font-size: 0.9rem;
+  margin: 4px 0 0 0;
+  color: #666;
+}
+
+
+        .right {
+            width: 50%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .explore-btn {
+            background: linear-gradient(45deg, #2C8BCA, #79BF45, #FDB215, #F68223, #F13C29, #EF579F);
+            border: none;
+            padding: 10px 30px;
+            color: white;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 37px;
+        }
+        .second-stage {
+            display: none;
+            padding: 100px 50px;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Pictory Logo">
+            </div>
+            <div class="buttons">
+                <button class="btn-enter">Entrar</button>
+                <button class="btn-signup">Criar conta</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="left">
+                <div class="phone">
+                    <!-- Aqui vai a imagem do celular -->
+                    <div class="profile-info">
+                      <div class="profile-pic"></div>
+                      <div class="profile-text">
+                        <h3>Scout the City</h3>
+                        <p>56,7 mil<br>seguidores</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+            <div class="right">
+                <h1>Conecte-se,<br> compartilhe,<br> inspire</h1>
+                <p>A melhor parte do Pictory é se<br> aproximar de pessoas incríveis e<br> descobrir novas ideias.</p>
+                <button class="explore-btn" id="explore-btn">Explorar</button>
+            </div>
+        </div>
+        <div class="second-stage" id="second-stage">
+            <h2>Bem-vindo à próxima fase</h2>
+            <p>Aqui está o conteúdo da segunda etapa.</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('explore-btn').addEventListener('click', function() {
+            document.getElementById('second-stage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
