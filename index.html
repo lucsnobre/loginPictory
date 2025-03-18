@@ -23,7 +23,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 50px;
+            padding: 20px 50px;
             position: fixed;
             top: 0;
             left: 0;
@@ -65,56 +65,52 @@
         }
     
         .left {
-    width: 50%;
-    background: url('./img/medium-shot-cool-girls-with-gen-z-makeup 1.png') no-repeat center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    position: relative;
+  width: 50%;
+  background: url('./img/pexels-thephotosaccount-30475870.jpg') no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column; /* empilhar celular e perfil */
+  align-items: center; /* centralizar horizontalmente */
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  
 }
 
 .phone {
-    width: 175px;
-    height: 320px;
-    background: url('./img/young-woman-wearing-trendy-hairstyle 1.png') no-repeat center;
-    background-size: cover;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    position: absolute; 
-    bottom: 35px; 
-    left: 70px; 
-    
-   
+  width: 175px;
+  height: 320px;
+  background: url('./img/Group\ 46\ \(1\).png') no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  margin-right:277px ;
+  margin-top: 42px;
+  
 }
 
-.profile-container {
-  position: absolute;
-  bottom: 0; /* fica alinhado embaixo */
-  left: 10px; /* ajusta a esquerda */
+.profile-info {
   display: flex;
   align-items: center;
-  z-index: 2; /* garante que fique sobre o celular */
+  margin-top: 20px; /* distância entre o celular e o perfil */
 }
 
 .profile-pic {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 3px solid white;
-  background: url('./img/image.png') no-repeat center;
+  border: 1px solid white;
+  background: url('./img/nabalaabala.jfif') no-repeat center;
   background-size: cover;
-  position: relative;
-  top: 260px;
-  left: -27px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-top: 200px;
+  margin-left: -40px;
 }
 
 .profile-text {
   margin-left: 10px;
-  margin-bottom: 10px; /* para alinhar com a borda inferior */
-  color: #333;
+  color: #ffffff;
+  margin-top: 300px;
 }
 
 .profile-text h3 {
@@ -126,8 +122,9 @@
 .profile-text p {
   font-size: 0.9rem;
   margin: 4px 0 0 0;
-  color: #666;
+  color: #ffffff;
 }
+
 
 
         .right {
@@ -142,7 +139,7 @@
         p {
             font-size: 1.2em;
             margin-bottom: 20px;
-            color: #333;
+            color: #000000;
         }
         .explore-btn {
             background: linear-gradient(45deg, #2C8BCA, #79BF45, #FDB215, #F68223, #F13C29, #EF579F);
@@ -153,7 +150,7 @@
             border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
-            margin-top: 37px;
+            margin-top: 17px;
         }
         .second-stage {
             display: none;
@@ -181,7 +178,7 @@
                       <div class="profile-pic"></div>
                       <div class="profile-text">
                         <h3>Scout the City</h3>
-                        <p>56,7 mil<br>seguidores</p>
+                        <p>56,7 mil seguidores</p>
                       </div>
                     </div>
                   </div>
