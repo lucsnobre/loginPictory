@@ -6,6 +6,10 @@
 }
 body {
     overflow-x: hidden;
+      --sb-track-color: #232E33;
+      --sb-track-color: #ffffff;
+      --sb-thumb-color: #6d6d6d;
+      --sb-size: 7px;
 }
 .container {
     width: 100vw;
@@ -39,7 +43,7 @@ body {
     font-size: 1em;
 }
 .btn-enter {
-    background: linear-gradient(45deg, #2C8BCA, #79BF45, #FDB215, #F68223, #F13C29, #EF579F);
+    background: linear-gradient(to right, #2C8BCA, #79BF45, #FDB215, #F68223, #F13C29, #EF579F);
     color: white;
 }
 .btn-signup {
@@ -58,6 +62,7 @@ body {
 .left {
 width: 50%;
 background: url('./img/pexels-thephotosaccount-30475870.jpg') no-repeat center;
+
 background-size: cover;
 display: flex;
 flex-direction: column; /* empilhar celular e perfil */
@@ -148,3 +153,28 @@ p {
     padding: 100px 50px;
     background: #f5f5f5;
 }
+
+  
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 17px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 17px;
+    border: 2px solid #6d6d6d;
+    filter: blur(6px);
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+ 
