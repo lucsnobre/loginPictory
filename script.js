@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Dados do cadastro:", formData)
         
         // Limpar os campos do formulário
-        emailInput.value = "";
-        passwordInput.value = "";
+        emailInput.value = ""
+        passwordInput.value = ""
     }
     
-    form.addEventListener("submit", submitForm);
+    form.addEventListener("submit", submitForm)
     
     form.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
-            submitForm(event);
+            submitForm(event)
         }
-    });
-});
+    })
+})
