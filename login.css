@@ -309,13 +309,18 @@ body {
   text-decoration: none;
 }
 
-.second-stage .recsenha {
+#imgRc{
+  all:unset;
   color: #f857a6;
   text-decoration: none;
 }
 
+.form-box{
+  text-decoration: none;
+}
+
 .second-stage .login-link a:hover {
-  text-decoration: underline;
+  opacity: 0.33;
 }
 
 
