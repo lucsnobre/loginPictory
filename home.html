@@ -3,110 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background-color: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .search-bar {
-            flex-grow: 1;
-            margin: 0 20px;
-            padding: 8px;
-            border-radius: 20px;
-            border: 1px solid #ccc;
-        }
-        .icons img {
-            width: 24px;
-            margin: 0 10px;
-        }
-        .profile-pic {
-            width: 32px;
-            border-radius: 50%;
-        }
-        .content {
-            display: flex;
-            margin-top: 60px;
-        }
-        .sidebar {
-            width: 80px;
-            padding: 10px;
-        }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-        .sidebar img {
-            width: 50px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .feed {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-        .post-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            width: 80%;
-        }
-        .post img {
-            width: 100%;
-            border-radius: 10px;
-        }
-    </style>
+    <title>Início</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" type="imagex/png" href="./img/logo (2).png">
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="logo">
-            <img src="img/logo (2).png" alt="Logo">
+            <img src="./img/logo (2).png" alt="Logo">
         </div>
-        <input type="text" placeholder="Pesquisar" class="search-bar">
+        <div class="search-container">
+            <img src="./imgHome/magnifying-glass.png" alt="Buscar">
+            <input type="text" placeholder="Pesquisar" class="search-bar">
+        </div>
         <div class="icons">
-            <img src="imgHome/bell.png" alt="Ícone 1">
-            <img src="img/icon2.png" alt="Ícone 2">
-            <img src="img/icon3.png" alt="Ícone 3">
-            <img src="img/user.png" alt="Perfil" class="profile-pic">
+            <img src="./imgHome/notification.png" alt="Notificações">
+            <img src="./imgHome/bell.png" alt="Mensagens">
+            <img src="./imgHome/settings.png" alt="Configurações">
         </div>
     </header>
     
-    <main class="content">
+    <div class="container">
         <aside class="sidebar">
             <ul>
-                <li><img src="img/story1.png" alt="Story 1"></li>
-                <li><img src="img/story2.png" alt="Story 2"></li>
-                <li><img src="img/story3.png" alt="Story 3"></li>
-                <li><img src="img/story4.png" alt="Story 4"></li>
+                <li><img src="user1.jpg" alt="Story 1"></li>
+                <li><img src="user2.jpg" alt="Story 2"></li>
+                <li><img src="user3.jpg" alt="Story 3"></li>
             </ul>
         </aside>
         
-        <section class="feed">
-            <div class="post-grid">
-                <div class="post"><img src="img/post1.png" alt="Post 1"></div>
-                <div class="post"><img src="img/post2.png" alt="Post 2"></div>
-                <div class="post"><img src="img/post3.png" alt="Post 3"></div>
-                <div class="post"><img src="img/post4.png" alt="Post 4"></div>
+        <main class="feed">
+            <div class="post">
+                <img src="post1.jpg" alt="Post 1">
+                <p>@usuario - 2.1M curtidas</p>
             </div>
-        </section>
-    </main>
+            <div class="post">
+                <img src="post2.jpg" alt="Post 2">
+                <p>@usuario - 1.3K curtidas</p>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

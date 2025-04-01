@@ -1,15 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -21,47 +11,100 @@ header {
     justify-content: space-between;
     background: white;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
 }
 
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
 .logo img {
-    cursor: pointer;
-    height: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.search-container {
+    display: flex;
+    text-align: start;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 700px;
+    height: 30px;
+    flex-grow: 1;
+    position: absolute;
+    left: 19.9%;
+    transform: translateX(-20%);
+    top: 20px;
+}
+
+.search-container img {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 10px;
+    opacity: 0.6;
 }
 
 .search-bar {
+    border: none;
+    background: transparent;
+    outline: none;
     flex-grow: 1;
-    margin: 0 15px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    width: 1000px;
-    border-radius: 20px;
-    max-width: 1000px;
-    margin-left: 100px;
-    padding-left: 100px;
+    padding: 5px 5px 5px 25px;
+    text-align: left;
 }
 
 .icons {
     display: flex;
-    gap: 15px;
-    height: 1px;
-    cursor: pointer;
+    gap: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.icons img {
+    width: 20px;
+    height: 20px;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     margin-top: 60px;
+}
+
+.story-section {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.story-section::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #ccc;
 }
 
 .sidebar {
     width: 80px;
     background: white;
     padding: 10px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    
     height: 100vh;
     position: fixed;
     left: 0;
@@ -101,7 +144,7 @@ header {
     background: white;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
     overflow: hidden;
 }
 
