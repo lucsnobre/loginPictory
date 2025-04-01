@@ -71,10 +71,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50vh; /* Apenas metade da tela */
+    height: 50vh; 
     object-fit: cover;
     z-index: -1;
-    clip-path: inset(0 42% 0 0); /* Recorta a parte de baixo */
+    clip-path: inset(0 42% 0 0); 
 }
 
 
@@ -284,20 +284,20 @@ body::-webkit-scrollbar {
   
   
   /* Second Stage */
-  .second-stage {
-     /* Altere de 300px para 100vh para ocupar a altura da tela */
+.second-stage {
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url(./img/fundo.png);
     background-size: cover;
-    background-position: center; /* Garante que a imagem fique centralizada */
-    margin-top: 70px;
-    size-adjust: 100px;
-    background-repeat: no-repeat; 
-    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 10vh; /* Garante que ocupa toda a tela */
     flex-direction: column;
+    margin: 0; /* Removendo margem que pode causar deslocamento */
 }
+
+
 
   
   /* Header da Second Stage */
