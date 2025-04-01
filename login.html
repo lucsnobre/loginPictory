@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pictory</title>
-  <link rel="stylesheet" href="login.css">
-  <link rel="shortcut icon" type="imagex/png" href="./img/logoBola.png">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictory</title>
+    <link rel="shortcut icon" type="imagex/png" href="./img/logo (2).png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <img src="./img/logo.png" alt="Logo Pictory" />
-    </div>
-    <div class="actions">
-      <button class="btn entrar">Entrar</button>
-      <button class="btn criar-conta">Criar conta</button>
-    </div>
-  </header>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Pictory Logo">
+            </div>
+            <div class="buttons">
+                <button class="btn-enter" onclick="window.location.href='login.html'">Entrar</button>
+                <button class="btn-signup" onclick="window.location.href='index.html'">Criar conta</button>
+            </div>
+        </div>
+       
+        
+        <div class="second-stage" id="second-stage">
+            <main class="container">
+                <!-- Esquerda -->
+                <section class="left">
+                    <img src="./img/pexels-thephotosaccount-30475870.jpg" alt="Imagem de fundo" class="background-image">
+                    <h2>Inscreva-se e<br>compartilhe seus momentos</h2>
+                </section>
 
-  <!-- Main -->
-  <main class="container">
-    <!-- Esquerda -->
-    <section class="left">
-      <h2>Inscreva-se e<br>compartilhe seus momentos</h2>
-    </section>
-
-    <!-- Direita -->
+                 <!-- Direita -->
     <section class="right">
-      <div class="form-box">
-        <img src="./img/logo (2).png" alt="Logo Pictory" class="logo-form" />
-        <h3>Bem-vindo(a) ao Pictory</h3>
-        <p>Entre na nossa comunidade</p>
-        <form action="#">
-          <input type="email" placeholder="Digite seu e-mail" required>
-          <div class="password-box">
-            <input type="password" placeholder="Crie uma senha" required>
-            <span class="toggle-password"><img src="./img/visible.png" alt="olho"></span>
-          </div>
-          <button type="submit" class="btn continuar">Continuar</button>
-        </form>
-        <p class="login-link">Já tem uma conta? <a href="#">Entrar</a></p>
-      </div>
-    </section>
-  </main>
+        <div class="form-box">
+          <img src="./img/logo (2).png" alt="Logo Pictory" class="logo-form" />
+          <h3>Bem-vindo de volta!</h3>
+          
+          <form id="signup-form">
+            <input type="email" id="email" placeholder="Nome de Usuário ou e-mail" required>
+            <div class="password-box">
+              <input type="password" id="password" placeholder="Digite sua senha" required>
+              <span class="toggle-password"><img src="./img/visible.png" alt="olho"></span>
+            </div>
+            <button type="submit" class="btn continuar">Continuar</button>
+          </form>
+          
+          <p class="login-link">Não tem uma conta? <a href="index.html">Cadastrar</a></p>
+          <p class="recsenha"><a href="recuperarsenha.html">Esqueceu sua senha?</a></p>
+        </div>
+      </section>
+    </main>
+        </div>
+        <div class="second-stage pictory-stage">
+
+    </div>
+    <script>
+       
+    </script>
 </body>
 </html>
