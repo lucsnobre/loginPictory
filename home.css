@@ -8,10 +8,8 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background: white;
     padding: 10px 20px;
-   
     position: fixed;
     width: 100%;
     top: 0;
@@ -20,9 +18,12 @@ header {
 }
 
 .logo {
-    position: absolute;
-    top: 20px;
-    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 50px;
+    cursor: pointer;
 }
 
 .logo img {
@@ -32,25 +33,19 @@ header {
 
 .search-container {
     display: flex;
-    text-align: start;
     align-items: center;
     background: #f0f0f0;
     padding: 5px 10px;
-    border-radius: 27px;
+    border-radius: 20px;
     width: 700px;
     height: 30px;
-    flex-grow: 1;
-    position: absolute;
-    left: 19.9%;
-    transform: translateX(-20%);
-    top: 20px;
+    margin-left: 20px;
 }
 
 .search-container img {
     width: 15px;
     height: 15px;
-    position: absolute;
-    left: 15px;
+    margin-right: 10px;
     opacity: 0.6;
 }
 
@@ -59,27 +54,27 @@ header {
     background: transparent;
     outline: none;
     flex-grow: 1;
-    padding: 5px 5px 5px 25px;
+    padding: 5px 5px 5px 0;
     text-align: left;
 }
 
 .icons {
     display: flex;
     gap: 10px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    margin-left: 20px;
 }
 
 .icons img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
+    height: 100vh;
 }
 
 .story-section {
@@ -88,23 +83,39 @@ header {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     position: relative;
-    border-right: 1px solid #000000;
 }
-
-
 
 .sidebar {
     width: 80px;
     background: white;
     padding: 10px;
+    border-right: 1px solid rgb(154, 154, 154);
     height: 100vh;
     position: fixed;
     left: 0;
-    top: 0; /* Ajustado para começar do topo */
-    border-right: 1px solid #BEBEBE;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #939393 #FFFFFF;
 }
 
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
 
+.sidebar::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #939393;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+}
 
 .sidebar ul {
     list-style: none;
@@ -130,7 +141,7 @@ header {
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    gap: 6px;
     padding: 20px;
     margin-left: 100px;
 }
@@ -139,11 +150,46 @@ header {
     background: white;
     padding: 10px;
     border-radius: 10px;
-    
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .post img {
-    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
     border-radius: 10px;
+    margin-bottom: 4px;
+}
+
+.post .username {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    padding-left: 2px;
+    align-self: flex-start;
+}
+
+.story-avatar {
+    padding: 2px;
+    border-radius: 100%;
+    background: linear-gradient(to right, #2C8BCA, #79BF45, #FDB215, #F68223, #F13C29, #EF579F);
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 3px 7px rgb(120, 120, 120);
+    width: 60px;
+    height: 60px;
+}
+
+.story-avatar img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 2px;
 }
