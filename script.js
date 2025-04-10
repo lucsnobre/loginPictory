@@ -1,41 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Seleciona os formulários de cadastro e login
-    const signupForm = document.getElementById("signup-form");
-    const loginForm = document.getElementById("login-form");
+    const form = document.getElementById("signup-form")
+    const emailInput = document.getElementById("email")
+    const passwordInput = document.getElementById("password")
 
-    // Função genérica para manipular o envio de formulários
-    async function handleFormSubmit(event, formType) {
-        event.preventDefault();
+    async function submitForm(event) {
+        event.preventDefault()
 
-        // Determina os campos de entrada com base no tipo de formulário
-        const emailInput = event.target.querySelector("input[name='email']");
-        const passwordInput = event.target.querySelector("input[name='password']");
+        const email = emailInput.value
+        const password = passwordInput.value
 
-        const email = emailInput.value;
-        const password = passwordInput.value;
+        // {
+        //     "nome":"Vitor Amato",
+        //     "email": "vitor@jesus.com",
+        //     "senha":"Amato",
+        //     "premium":"1",
+        //     "imagemPerfil":"https://assets.propmark.com.br/uploads/2022/02/WhatsApp-Image-2022-02-18-at-08.52.06.jpeg",
+        //     "senhaRecuperacao": "Gato12"
+        // }
 
-        let formData;
-        let url;
-
-        if (formType === "signup") {
-            // Dados específicos para o cadastro
-            formData = {
-                nome: "Nome do Usuário", // Substitua pelo valor adequado
-                email: email,
-                senha: password,
-                premium: "1",
-                imagemPerfil: "URL_da_Imagem", // Substitua pelo valor adequado
-                senhaRecuperacao: "Palavra_Chave" // Substitua pelo valor adequado
-            };
-            url = "https://back-spider.vercel.app/user/cadastrarUser";
-        } else if (formType === "login") {
-            // Dados específicos para o login
-            formData = {
-                email: email,
-                senha: password
-            };
-            url = "https://back-spider.vercel.app/user/loginUser";
+        const formData = {
+            nome: "test tesd",
+            email: email,
+            senha: password,
+            premium:"1",
+            imagemPerfil:"https://assets.propmark.com.br/uploads/2022/02/WhatsApp-Image-2022-02-18-at-08.52.06.jpeg",
+            senhaRecuperacao: "Gato12"
         }
+
+        const url = "https://back-spider.vercel.app/user/cadastrarUser"
+
+        const url2 = "http://localhost:8080/user/cadastrarUser"
 
         try {
             const response = await fetch(url, {
@@ -44,32 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
-            });
+            })
+
+            console.log(response);
+            
 
             if (response.ok) {
-                const data = await response.json();
-                console.log(`${formType === "signup" ? "Cadastro" : "Login"} bem-sucedido:`, data);
-                // Aqui você pode adicionar lógica adicional, como redirecionamento ou armazenamento de token
+                const data = await response.json()
+                console.log('Resposta da API:', data)
             } else {
-                console.error(`Erro ao realizar ${formType === "signup" ? "cadastro" : "login"}:`, response.statusText);
-                // Aqui você pode exibir uma mensagem de erro para o usuário
+                console.error('Erro ao enviar dados:', response.statusText)
             }
         } catch (error) {
-            console.error(`Erro ao enviar dados:`, error);
-            // Aqui você pode lidar com erros de rede ou outros problemas
+            console.error('Erro ao enviar dados:', error)
         } finally {
-            // Limpa os campos do formulário após o envio
-            emailInput.value = "";
-            passwordInput.value = "";
+            emailInput.value = ""
+            passwordInput.value = ""
         }
     }
 
-    // Adiciona ouvintes de evento para os formulários de cadastro e login
-    if (signupForm) {
-        signupForm.addEventListener("submit", (event) => handleFormSubmit(event, "signup"));
-    }
+    form.addEventListener("submit", submitForm)
 
-    if (loginForm) {
-        loginForm.addEventListener("submit", (event) => handleFormSubmit(event, "login"));
-    }
+    form.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            submitForm(event);
+        }
+    });
 });
