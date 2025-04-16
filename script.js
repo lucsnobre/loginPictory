@@ -64,4 +64,27 @@ document.addEventListener("DOMContentLoaded", function () {
             submitForm(event);
         }
     });
+    document.getElementById("explore-btn").addEventListener("click", function () {
+        // Seleciona a seção second-stage e rola suavemente até ela
+        document.getElementById("second-stage").scrollIntoView({
+            behavior: "smooth", // Define a rolagem suave
+            block: "start" // Garante que a seção comece no topo da visualização
+        });
+    });
+
+// Seleciona o botão de toggle e o campo de senha
+const togglePassword = document.querySelector('.toggle-password img');
+const passwordField = document.getElementById('password');
+
+// Adiciona um evento de clique ao botão de toggle
+togglePassword.addEventListener('click', () => {
+    // Alterna o tipo do campo de senha entre 'password' e 'text'
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text'; // Torna o texto visível
+        togglePassword.src = './img/hide.png'; // Altere a imagem para indicar que a senha está visível
+    } else {
+        passwordField.type = 'password'; // Oculta o texto novamente
+        togglePassword.src = './img/visible.png'; // Altere a imagem para indicar que a senha está oculta
+    }
+});
 });
