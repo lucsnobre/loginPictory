@@ -44,7 +44,7 @@ body {
     display: flex;
     gap: 10px;
 }
-.buttons .btn-enter .btn-signup {
+.buttons a {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -197,7 +197,6 @@ p {
     cursor: pointer;
     font-weight: bold;
     margin-top: 17px;
-    id: explore-btn;
 }
 
 .second-stage * {
@@ -205,17 +204,6 @@ p {
     
   }
   
-  input[type="password"],
-  input[type="text"] {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      width: 100%;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 500;
-  }
-
-
   .second-stage .form-box {
     background-color: #fff;
     padding: 40px;
@@ -458,7 +446,7 @@ body::-webkit-scrollbar {
     border-radius: 8px;
     border: 1px solid #ccc;
     width: 100%;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 500;
   }
   
@@ -500,4 +488,4 @@ body::-webkit-scrollbar {
     height: 16px;
     opacity: 50%;
   }
-
+  
