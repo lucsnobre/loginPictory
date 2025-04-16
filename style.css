@@ -44,7 +44,7 @@ body {
     display: flex;
     gap: 10px;
 }
-.buttons button {
+.buttons .btn-enter .btn-signup {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
