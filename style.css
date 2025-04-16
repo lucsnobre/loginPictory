@@ -44,7 +44,7 @@ body {
     display: flex;
     gap: 10px;
 }
-.buttons a {
+.buttons buttons {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
