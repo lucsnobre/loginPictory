@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil</title>
+  <link rel="stylesheet" href="perfil.css">
+  <link rel="shortcut icon" href="img/logo (2).png" type="image/x-icon">
+  <script src="perfil.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo"></div>
+      <div class="avatar-list">
+        <!-- Lista de avatares (pode ser dinâmica também se necessário) -->
+        <img src="avatar1.jpg" class="avatar" />
+        <img src="avatar2.jpg" class="avatar" />
+        <img src="avatar3.jpg" class="avatar" />
+        <!-- ... -->
+      </div>
+    </aside>
+
+    <!-- Área principal -->
+    <div class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <input type="text" placeholder="Pesquisar..." class="search-bar">
+        <div class="header-icons">
+          <span>🔔</span>
+          <span>➕</span>
+          <img src="imgPerfil/semFoto.png" class="profile-pic" id="header-profile-pic" />
+        </div>
+      </header>
+
+      <!-- Conteúdo do perfil -->
+      <main class="profile">
+        <!-- Capa -->
+        <div class="banner" onclick="document.getElementById('bannerInput').click();">
+          <img src="imgPerfil/fundoPadrao.png" alt="Capa" id="banner-image" />
+          <div class="banner-overlay">Alterar imagem</div>
+          <input type="file" id="bannerInput" accept="image/*" style="display: none;" onchange="alterarImagemBanner(event)" />
+        </div>
+
+        <!-- Avatar -->
+        <div class="profile-avatar-wrapper">
+          <img src="imgPerfil/semFoto.png" class="profile-avatar" id="user-avatar" />
+          <div class="avatar-overlay" onclick="document.getElementById('fileInput').click();">
+            Alterar imagem
+          </div>
+          <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+        </div>
+
+        <!-- Info -->
+        <div class="info">
+          <h1 id="user-name">Nome do Usuário</h1>
+          <p class="handle"><span class="azul">@</span><span class="laranja" id="user-handle">usuário</span></p>
+          <p class="bio" id="user-bio">Bio do usuário</p>
+          <button class="seguir">Seguir</button>
+        </div>
+
+        <!-- Galeria -->
+        <div class="gallery" id="gallery">
+          <!-- As fotos da galeria podem ser carregadas dinamicamente -->
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
