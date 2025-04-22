@@ -64,4 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
             togglePassword.src = './img/visible.png';
         }
     });
+
+    // Função para rolar até a segunda seção
+    document.getElementById("explore-btn").addEventListener("click", function () {
+        // Seleciona a seção second-stage e rola suavemente até ela
+        document.getElementById("second-stage").scrollIntoView({
+            behavior: "smooth", // Define a rolagem suave
+            block: "start" // Garante que a seção comece no topo da visualização
+        });
+    });
 });

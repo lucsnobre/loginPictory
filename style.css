@@ -11,6 +11,7 @@ html {
 
 a{
 text-decoration: none;
+  text-decoration: none
 }
 
 body {
@@ -51,6 +52,11 @@ body {
   border-radius: 20px;
   cursor: pointer;
   font-size: 1em;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
 }
 .btn-enter {
   background: linear-gradient(to right, #2C8BCA, #79BF45, #FDB215, #F68223, #F13C29, #EF579F);
@@ -390,6 +396,99 @@ body {
   margin-top: -30px;
   text-align: left;
 }
+
+  
+  /* Seção Direita da Second Stage */
+  .second-stage .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+  
+  .second-stage .form-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 150px;
+    margin-left: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+  
+  .second-stage .logo-form {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .second-stage .form-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+  }
+  
+  .second-stage .form-box p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .second-stage form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .second-stage input[type="email"],
+  .second-stage input[type="password"] {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+  }
+  
+  .second-stage .password-box {
+    position: relative;
+  }
+  
+  .second-stage .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    color: #777;
+  }
+  
+  .second-stage .continuar {
+    background: linear-gradient(45deg, #2C8BCA, #79BF45, #FDB215, #F68223, #F13C29, #EF579F);
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .second-stage .login-link {
+    margin-top: 15px;
+    font-size: 0.85rem;
+  }
+  
+  .second-stage .login-link a {
+    color: #f857a6;
+    text-decoration: none;
+  }
+  
+  .second-stage .login-link a:hover {
+    text-decoration: underline;
+  }
 
 /* Seção Direita da Second Stage */
 .second-stage .right {
