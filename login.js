@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("signup-form"); // Verifique se o ID está correto
+    const form = document.getElementById("signup-form");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
   
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         senha: password
       };
   
-      const loginUrl = "https://back-spider.vercel.app/login"; // URL correta
+      const loginUrl = "https://back-spider.vercel.app/login"; // Voltamos para o que funcionava
   
       try {
         const response = await fetch(loginUrl, {
@@ -26,18 +26,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
   
         const data = await response.json();
-        if (response.ok) {
-          console.log("Login bem-sucedido:", data);
   
-          // Armazenar os dados do usuário no localStorage
-          localStorage.setItem("userData", JSON.stringify(data));
+        if (response.ok && data.success) {
+            console.log("Login bem-sucedido:", data);
           
-          // Redirecionar para a tela de perfil com o ID
-          window.location.href = `perfil.html?id=${data.id}`;
-        } else {
-          console.error('Erro ao realizar login:', data.message);
-          alert(data.message || "Erro ao realizar login. Tente novamente.");
-        }
+            // Armazenar os dados do usuário corretamente
+            localStorage.setItem("userData", JSON.stringify(data.user));
+          
+            // Redirecionar para o perfil com o ID correto
+            window.location.href = `perfil.html?id=${data.user.id}`;
+          } else {
+            console.error('Erro ao realizar login:', data);
+            alert(data.message || "Erro ao realizar login. Tente novamente.");
+          }          
       } catch (error) {
         console.error('Erro ao enviar dados:', error);
         alert("Erro de rede ou no servidor.");
